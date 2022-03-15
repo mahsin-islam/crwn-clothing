@@ -8,6 +8,7 @@ import {
   useParams
 } from "react-router-dom";
 import './App.css';
+import Header from "./components/header/header.component";
 import Home from "./components/Home/Home";
 import HomePage from './pages/homepage/homepage.component.jsx';
 import ShopPage from "./pages/shop/shop.component";
@@ -36,13 +37,13 @@ const TopicDetail = (props) => {
 function App() {
   return (
     <div>
-      <Routes>
+      <Header />
+       <Routes>
         <Route path="/" element={<HomePage />} ></Route>
         <Route exact={true} path="/topics" element={<TopicsList />} ></Route>
         <Route path="/topics/:topicId" element={<TopicDetail />} ></Route>
         <Route path="/shop" element={<ShopPage />} ></Route>
-
-      </Routes>
+      </Routes> 
 
       {/* <HomePage></HomePage> */}
     </div>
